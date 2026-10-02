@@ -22,14 +22,15 @@
         }
         h1 {
             font-size: 1.8rem;
-            color: #ffffff;
+            color: #73f0f9;
             margin: 0 0 10px 0;
         }
         p.subtitle {
-            color: #888;
+            color: #41c3dc;
             font-size: 0.95rem;
             margin: 0;
         }
+        /* 日常卡片样式 */
         .memo-box {
             background: #1e1e1e;
             border: 1px solid #2a2a2a;
@@ -37,15 +38,33 @@
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: border-color 0.2s;
+        }
+        .memo-box:hover {
+            border-color: #444; /* 鼠标悬停时边框稍微亮一点 */
+        }
+        .memo-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
         }
         .memo-date {
             font-size: 0.85rem;
             color: #777;
-            margin-bottom: 8px;
+        }
+        /* 心情/分类小标签 */
+        .memo-tag {
+            font-size: 0.75rem;
+            background: #2b2b2b;
+            color: #aaa;
+            padding: 2px 8px;
+            border-radius: 4px;
         }
         .memo-content {
             font-size: 1.05rem;
-            color: #d4d4d4;
+            color: #eff2f3;
+            white-space: pre-wrap; /* 允许在文本里直接换行 */
         }
         footer {
             text-align: center;
@@ -59,22 +78,80 @@
 
     <header>
         <h1>闲言碎语</h1>
-        <p class="subtitle">记录日常的灵感、情绪与碎碎念。</p>
+        <p class="subtitle">记录个人的日常的灵感、情绪与碎碎念。</p>
     </header>
 
     <main>
-        <!-- 第一条碎碎念示例，以后你可以直接在这里加新的 -->
+        <!-- 节点 1：最新的日常 -->
         <div class="memo-box">
-            <div class="memo-date">2026-09-29</div>
+            <div class="memo-header">
+                <span class="memo-date">2026-09-28</span>
+                <span class="memo-tag">置顶</span>
+            </div>
             <div class="memo-content">
-                今天成功搭建了第二个独立网站仓库！黑色的背景看起来确实很有感觉，慢慢往里面加东西吧。
+                今天搭建了这个第二个网站，打算在这个网站里面记录私人的生活，把这里当个日记一样把有意义的事情记录下来。
             </div>
         </div>
+
+        <!-- 节点 2：预留模板（你可以直接复制这块往下加新内容） -->
+        <div class="memo-box">
+            <div class="memo-header">
+                <span class="memo-date">2026-09-25</span>
+                <span class="memo-tag">日常</span>
+            </div>
+            <div class="memo-content">
+今天可是个重要的日子，是人生中第一次交到女朋友呢。hhh，我肯定要多关注关注女朋友咯。
+            </div>
+        </div>
+
+        <!-- 节点 3：预留模板 -->
+        <div class="memo-box">
+            <div class="memo-header">
+                <span class="memo-date">2026-09-30</span>
+                <span class="memo-tag">日常</span>
+            </div>
+            <div class="memo-content">
+                想不出来今天要记什么了。
+            </div>
+        </div>
+
+        
+        <div class="memo-box">
+            <div class="memo-header">
+                <span class="memo-date">2026-10-01</span>
+                <span class="memo-tag">日常</span>
+            </div>
+            <div class="memo-content">
+                女朋友说今天第一次拿到王者排位的顶级，那我肯定要记录在这边咯。
+            </div>
+        </div>
+
+        <!--
+        <div class="memo-box">
+            <div class="memo-header">
+                <span class="memo-date">2026-09-30 (示例模板)</span>
+                <span class="memo-tag">灵感</span>
+            </div>
+            <div class="memo-content">
+                这里是未来的某一天你想写点什么时的模板。你只需要复制上面整段 &lt;div class="memo-box"&gt;...&lt;/div&gt;，粘贴到它的上面，然后改改日期、标签和文字就行啦！
+            </div>
+        </div> -->
+
+        <!--
+        <div class="memo-box">
+            <div class="memo-header">
+                <span class="memo-date">2026-09-30 (示例模板)</span>
+                <span class="memo-tag">灵感</span>
+            </div>
+            <div class="memo-content">
+                这里是未来的某一天你想写点什么时的模板。你只需要复制上面整段 &lt;div class="memo-box"&gt;...&lt;/div&gt;，粘贴到它的上面，然后改改日期、标签和文字就行啦！
+            </div>
+        </div> -->        
     </main>
 
-    <footer>
+    <!--<footer>
         <p>&copy; 2026 Nightcrystalmaple</p>
     </footer>
-
+    -->
 </body>
 </html>
